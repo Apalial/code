@@ -133,7 +133,7 @@ for i = 2:n
         f(i,j) = (f(i,j-1) - f(i-1,j-1)) / (a(i) - a(i-j+1));
     end
 end
-fxn = 1;
+fxn = f(n,n);
 for i = n-1:-1:1
     fxn = fxn * (x - a(i)) + f(i,i);
 end
